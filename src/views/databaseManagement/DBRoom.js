@@ -9,7 +9,7 @@ import { Link } from '@reach/router';
 //In the actual website, user_id should automatically come from session.
 //Room should be selectable by name. On change, we can query the api for the corresponding ID to the name.
 
-function MakeRoom(){
+function DBRoom(){
     const [room_number, setRoom_Number] = useState('');
     const [type, setType] = useState('Single');
     const [description, setDescription] = useState('A nice room');
@@ -200,4 +200,4 @@ return(
 )
 }
 
-export default MakeRoom;
+export default DBRoom;

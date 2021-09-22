@@ -10,7 +10,7 @@ module.exports = function(app) {
     app.post('/room/create', roomController.create);
     app.get('/room/findOne/:id', roomController.findOne);
     app.delete('/room/deleteOne/:id', roomController.deleteOne);
-    app.put('/room/updateOne/:id', roomController.updateOne);D
+    app.put('/room/updateOne/:id', roomController.updateOne);
 
 // User Table Routes
     app.post('/register', userController.createUser);

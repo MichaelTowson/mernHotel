@@ -7,7 +7,7 @@ import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa';
 import styles from '../components/index.module.css';
 import backGround from '../components/images/resort.JPG';
 
-function Main() {
+function Home() {
     const [rooms, setRooms] = useState(null);
     useEffect(() => {
         console.log("inside use effect");
@@ -100,4 +100,4 @@ function Main() {
         )
     }
 }
-export default Main;
+export default Home;
