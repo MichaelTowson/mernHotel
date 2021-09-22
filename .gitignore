@@ -1,0 +1,4 @@
+.history/
+client/.eslintcache
+node_modules/
+.env
