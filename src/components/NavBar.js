@@ -6,7 +6,7 @@ import { FaUserCircle } from "react-icons/fa"
 import axios from 'axios';
 // import Login from '../components/Login';
 import { navigate } from '@reach/router';
-import hotelLogo from './images/hotel-symbol.png'
+import hotelLogo from '../images/UI/hotel-symbol.png'
 
 
 

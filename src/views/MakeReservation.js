@@ -5,7 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 import './ReservationStyle.css';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
-import backGround from '../components/images/reservation-page.jpg';
+import backGround from '../images/reservation-page.jpg';
 import {navigate} from '@reach/router';
 
 function MakeReservation() {

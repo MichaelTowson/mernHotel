@@ -3,7 +3,7 @@ import axios from 'axios';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
 import RoomsFeat from '../components/RoomsFeat';
-import backGround from '../components/images/room.jpg';
+import backGround from '../images/rooms/room.jpg';
 import styles from '../components/index.module.css';
 
 function Rooms() {

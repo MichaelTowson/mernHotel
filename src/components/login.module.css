@@ -1,0 +1,33 @@
+.flex {
+    display:flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.registerdiv{
+    width: 300px;
+    margin-right: 100px;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+}
+.logindiv{
+    width: 300px;
+}
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 25px;
+    height:35px;
+
+}
+
+.logButton {
+    background:#af9a7d;
+    color: #fff;
+}

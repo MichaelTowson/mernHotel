@@ -1,5 +1,5 @@
 import React , {useState} from 'react'
-import styles from './index.module.css'
+import styles from './login.module.css'
 import axios from 'axios';
 import {navigate} from '@reach/router';
 

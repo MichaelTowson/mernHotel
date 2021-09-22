@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import NavBar from './NavBar';
 import Hero from './Hero';
-import backGround from '../components/images/lobby.jpg';
+import backGround from '../images/lobby.jpg';
 import styles from './index.module.css';
 import axios from 'axios';
 import Login from '../components/Login';
