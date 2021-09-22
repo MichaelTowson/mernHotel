@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './index.module.css';
+import styles from './hero.module.css';
 // import backGround from './images/resort.JPG';
 import { Link } from '@reach/router';
 

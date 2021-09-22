@@ -1,6 +1,6 @@
 import { Link } from '@reach/router';
 import React, { useState } from 'react'
-import styles from './index.module.css'
+import styles from './navbar.module.css'
 import { FaAlignRight } from "react-icons/fa"
 import { FaUserCircle } from "react-icons/fa"
 import axios from 'axios';

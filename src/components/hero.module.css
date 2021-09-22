@@ -1,0 +1,52 @@
+.heroImage {
+    /* background-image: url("./images/resort.JPG"); */
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBox{
+    border: 2px solid var(--mainWhite);
+    width: 550px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.6);
+
+}
+
+.heroTitle {
+    color: var(--mainWhite);
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+}
+
+.heroLine{
+    width: 95px;
+    height: 3px;
+    background: var(--primaryColor);
+    margin: 1rem auto;
+}
+
+.heroDesc{
+    color: var(--mainWhite);
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+}
+.heroBtn{
+    color: var(--mainWhite);
+    background-color: var(--primaryColor);
+    border: none;
+    border-radius: 3px;
+    height: 42px;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.heroBtn:hover {
+    color: var(--mainBlack);
+    transition: var(--mainTransition);
+}

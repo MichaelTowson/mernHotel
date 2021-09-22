@@ -21,22 +21,22 @@ function Home() {
     const services = [
         {
             icon: <FaCocktail />,
-            title: "Happy Ours ",
+            title: "Pool-Side Bar ",
             info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         },
         {
             icon: <FaHiking />,
-            title: "Hiking places",
+            title: "Trailheads from Property",
             info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         },
         {
             icon: <FaShuttleVan />,
-            title: "Free Shuttles",
+            title: "Free Shuttles to Local Attractions",
             info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         },
         {
             icon: <FaBeer />,
-            title: "Best Beer",
+            title: "In-House Brewery",
             info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         }
     ];
