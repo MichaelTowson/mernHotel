@@ -84,18 +84,6 @@ const RoomSchema = new mongoose.Schema({
         type: Boolean,
         required: [true, "Enter 'true' or 'false' for whether pets are allowed in the room."]
     },
-
-    featured_image: {
-        type: String,
-        required: [true, "Please write the url for a large image to be featured for this room."]
-    },
-
-    //Optional: An array of strings containing additional images of the room.
-    gallery_images: {
-        type: Array,
-        required: [false]
-    },
-
 }, { timestamps: true });
 
 const Room = mongoose.model('Room', RoomSchema)

@@ -1,7 +1,6 @@
 const roomController = require('../controllers/room.controller');
 const reservationController = require('../controllers/reservation.controller');
-// const userController = require('../controllers/user.controller');
-const userController = require('../controllers/login.controller');
+const userController = require('../controllers/user.controller');
 
 module.exports = function(app) {
 
@@ -13,11 +12,11 @@ module.exports = function(app) {
     app.put('/room/updateOne/:id', roomController.updateOne);
 
 // User Table Routes
-    app.post('/register', userController.createUser);
-    app.post("/login", userController.loginUser);
+    // app.post('/register', userController.createUser);
+    // app.post("/login", userController.loginUser);
     app.get('/all', userController.findAll);
-    app.delete("/logout", userController.logoutUser);
-    app.get('/authchecker', userController.authChecker);
+    // app.delete("/logout", userController.logoutUser);
+    // app.get('/authchecker', userController.authChecker);
     app.get('/user/findOne/:id', userController.findOne);
     app.delete('/user/deleteOne/:id', userController.deleteOne);
     app.put('/user/updateOne/:id', userController.updateOne);

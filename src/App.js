@@ -24,8 +24,8 @@ function App() {
                 <Register path="/register" />
                 <ViewReservation path="/reservation" />
                 <MakeReservation path = "/makereservation" />
-                <DBUser path = "/makeuser" />
-                <DBRoom path = "/makeroom" />
+                <DBUser path = "/DBUser" />
+                <DBRoom path = "/DBRoom" />
                 <CancelReservation path="/cancel/:id"/>
             </Router>
         </div>
