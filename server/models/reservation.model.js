@@ -21,16 +21,23 @@ const ReservationSchema = new mongoose.Schema({
         required: [false, "Please enter today's date or a future date for the reservation."],
     },
 
-    adult_rsvps: {
+    rsvps: {
         type: Number,
         required: [true, "Please enter the number of adult reservations."],
     },
 
-    //This needs to be linked to reservations model.
-    child_rsvps: {
-        type: Number,
-        required: [true, "Please enter the number of child reservations."],
+    paid: {
+        type: Boolean,
+        default: false,
     },
+
+    billing_address: {
+        type: String,
+        required: [true, "Please enter a valid billing address."]
+    }
+
+
+
 }, {timestamps: true});
 
 const Reservation = mongoose.model('Reservation', ReservationSchema)

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator')
 
 const UserSchema = new mongoose.Schema({
 
@@ -31,7 +32,8 @@ const UserSchema = new mongoose.Schema({
         validate: {
             validator: val => /^([\w-\.]+@([\w-]+\.)+[\w-]+)?$/.test(val),
             message: "Please enter a valid email"
-        }
+        },
+        unique: true
     },
 
     password: {
@@ -46,6 +48,8 @@ const UserSchema = new mongoose.Schema({
     },
 
 }, {timestamps: true});
+
+UserSchema.plugin(uniqueValidator);
 
 UserSchema.virtual('confirmPassword')
     .get(() => this._confirmPassword)
