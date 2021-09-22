@@ -9,10 +9,10 @@ const router = express.Router();
 const mongoose = require("mongoose");
 
 //ENV variables from config files.
-const SESS_SECRET=process.env.SESS_SECRET
-const COOKIE_NAME=process.env.COOKIE_NAME
-const MONGO_URI=process.env.MONGO_URI
-const PORT=process.env.PORT
+const SESS_SECRET = process.env.SESS_SECRET;
+const COOKIE_NAME = process.env.COOKIE_NAME;
+const MONGO_URI = process.env.MONGO_URI;
+const PORT = process.env.PORT;
 
 //variable that will control the expiry date of the session cookie
 const MAX_AGE = 1000 * 60 * 60 * 3; // Three hours
