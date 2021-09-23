@@ -18,7 +18,7 @@ function Register() {
 
     const registerUser = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/register', {
+        axios.post('http://localhost:5000/register', {
             first_name,
             last_name,
             number,

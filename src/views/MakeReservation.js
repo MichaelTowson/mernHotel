@@ -11,11 +11,10 @@ import {navigate} from '@reach/router';
 function MakeReservation() {
     const [room_id, setRoom_Id] = useState('');
     const [date, setDate] = useState(new Date());
-    const [adult_rsvps, setAdult_Rsvps] = useState(0);
-    const [child_rsvps, setChild_Rsvps] = useState(0);
+    const [rsvps, setRsvps] = useState(0);
     const [validationErrors, setValidationErrors] = useState([]);
     const [roomsList, setRoomsList] = useState(null);
-    const user_id = localStorage.getItem("userId");
+    const user_id = "614be2bba269376f081096cc"; //Dummy data for development. Eventually replace
 
     console.log("User ID: " + user_id);
     useEffect(() => {
@@ -34,7 +33,7 @@ function MakeReservation() {
             event.preventDefault();
             axios.post(
                 'http://localhost:5000/reservation/create',
-                { user_id, room_id, date, adult_rsvps, child_rsvps }
+                { user_id, room_id, date, rsvps, }
             ).then( () => {navigate('/reservation')})
             .catch(err => {
                 const errorMessages = err.response.data.errors;
@@ -158,21 +157,12 @@ function MakeReservation() {
                         <br></br>
                         <div className="inputsReservation">
                             <div>
-                                <label className="labelName">Adult RSVPs</label>
+                                <label className="labelName">RSVPs</label>
                                 <input
                                     type="Number"
                                     className="onlythisinput"
-                                    value={adult_rsvps}
-                                    onChange={event => setAdult_Rsvps(event.target.value)}
-                                />
-                            </div>
-                            <div>
-                                <label className="labelName">Child RSVPs:</label>
-                                <input
-                                    type="Number"
-                                    className="onlythisinput"
-                                    value={child_rsvps}
-                                    onChange={event => setChild_Rsvps(event.target.value)}
+                                    value={rsvps}
+                                    onChange={event => setRsvps(event.target.value)}
                                 />
                             </div>
                         </div>
