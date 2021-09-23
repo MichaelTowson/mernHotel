@@ -8,7 +8,7 @@ function CancelReservation(props){
     const user_id = localStorage.getItem("userId");
 
     useEffect(() => {
-        axios.delete("http://localhost:8000/reservation/deleteOne/" + id)
+        axios.delete("http://localhost:5000/reservation/deleteOne/" + id)
         .then(() => navigate("/reservation"))
         .catch(err => console.log(err));
     }, []);

@@ -12,11 +12,8 @@ module.exports = function(app) {
     app.put('/room/updateOne/:id', roomController.updateOne);
 
 // User Table Routes
-    // app.post('/register', userController.createUser);
-    // app.post("/login", userController.loginUser);
-    app.get('/all', userController.findAll);
-    // app.delete("/logout", userController.logoutUser);
-    // app.get('/authchecker', userController.authChecker);
+    app.post('/register', userController.create);
+    app.get('/all', userController.findAll);;
     app.get('/user/findOne/:id', userController.findOne);
     app.delete('/user/deleteOne/:id', userController.deleteOne);
     app.put('/user/updateOne/:id', userController.updateOne);

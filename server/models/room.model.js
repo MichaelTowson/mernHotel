@@ -1,21 +1,17 @@
 const mongoose = require('mongoose');
+const uniqueValidator = require("mongoose-unique-validator");
 
 const RoomSchema = new mongoose.Schema({
 
     //Room also has the field of _id, which is automatically created upon generation.
 
-    reservations: [{
-        type: String,
-        required: [false],
-    }],
+    reservations: [ {type: String } ],
 
-    dates_in_use: [{
-        type: Date,
-        required: [false],
-    }],
+    dates_in_use: [ { type: Date } ],
 
     room_number: {
         type: Number,
+        unique: true,
         required: [true, "Please enter a valid room number between 1-999"],
     },
     //NOTE: Room number is the "name" for the room. This is different from the longer and more complicated _id specified above.

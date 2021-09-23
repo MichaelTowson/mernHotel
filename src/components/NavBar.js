@@ -38,7 +38,7 @@ function NavBar() {
 
     const logoutUser = (e) => {
         e.preventDefault();
-        axios.delete('http://localhost:8000/logout')
+        axios.delete('http://localhost:5000/logout')
             .then(res => {
                 localStorage.clear();
                 localStorage.setItem("userName", "Guest");

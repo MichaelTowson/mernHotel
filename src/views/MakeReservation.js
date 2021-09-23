@@ -19,7 +19,7 @@ function MakeReservation() {
 
     console.log("User ID: " + user_id);
     useEffect(() => {
-        axios.get('http://localhost:8000/room/findAll')
+        axios.get('http://localhost:5000/room/findAll')
             .then(response => { setRoomsList(response.data) })
             .catch(err => console.log(err));
     }, []);
@@ -33,7 +33,7 @@ function MakeReservation() {
         if(user_id){ 
             event.preventDefault();
             axios.post(
-                'http://localhost:8000/reservation/create',
+                'http://localhost:5000/reservation/create',
                 { user_id, room_id, date, adult_rsvps, child_rsvps }
             ).then( () => {navigate('/reservation')})
             .catch(err => {

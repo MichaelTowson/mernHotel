@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
-import RoomsFeat from '../components/RoomsFeat';
+import RoomThumbnail from '../components/RoomThumbnail';
 import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa';
 import styles from '../components/index.module.css';
 import backGround from '../images/resort.JPG';
@@ -11,7 +11,7 @@ function Home() {
     const [rooms, setRooms] = useState(null);
     useEffect(() => {
         console.log("inside use effect");
-        axios.get("http://localhost:8000/room/findAll")
+        axios.get("http://localhost:5000/room/findAll")
             .then(result => {
                 console.log("all room here ",result.data);
                 setRooms(result.data)
@@ -92,7 +92,7 @@ function Home() {
                     <div className={styles.allRooms}>
                         {
                             filteredRoom.map((item, _idx) => 
-                            <RoomsFeat room = {item} />
+                            <RoomThumbnail room = {item} />
                         )}
                     </div><br></br><br></br>
                 </div>

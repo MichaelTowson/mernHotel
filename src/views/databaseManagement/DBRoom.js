@@ -24,14 +24,12 @@ function DBRoom(){
     const [parking_included, setParking_Included] = useState('false');
     const [smoking, setSmoking] = useState('false');
     const [pets, setPets] = useState('false');
-    const [featured_image, setFeatured_Image] = useState('https://setupmyhotel.com/images/Room-Type-Single-Room.jpg?ezimgfmt=rs:300x250/rscb263/ng:webp/ngcb263');
-    const [gallery_images, setGallery_Images] = useState('');
     const [validationErrors, setValidationErrors] = useState([]);
 
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post('http://localhost:8000/room/create',
+        axios.post('http://localhost:5000/room/create',
             {
                 room_number,
                 type,
@@ -46,9 +44,7 @@ function DBRoom(){
                 wifi_included,
                 parking_included,
                 smoking,
-                pets,
-                featured_image,
-                gallery_images
+                pets
             })
             .then(response => {
                 console.log(response);
@@ -169,20 +165,6 @@ return(
                     type = "Boolean"
                     value = {pets}
                     onChange = {event => setPets(event.target.value)} 
-                />
-                <br></br>
-                <label>Featured Image:</label>
-                <input
-                    type = "String"
-                    value = {featured_image}
-                    onChange = {event => setFeatured_Image(event.target.value)} 
-                />
-                <br></br>
-                <label>Gallery Images:</label>
-                <input
-                    type = "String"
-                    value = {gallery_images}
-                    onChange = {event => setGallery_Images(event.target.value)} 
                 />
                 <button>Make Room</button>
             </form>
