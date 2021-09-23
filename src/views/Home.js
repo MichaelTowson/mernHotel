@@ -10,10 +10,9 @@ import backGround from '../images/resort.JPG';
 function Home() {
     const [rooms, setRooms] = useState(null);
     useEffect(() => {
-        console.log("inside use effect");
         axios.get("http://localhost:5000/room/findAll")
             .then(result => {
-                console.log("all room here ",result.data);
+                console.log("all rooms loaded: ",result.data);
                 setRooms(result.data)
             })
             .catch(err => console.log(err));
@@ -48,19 +47,20 @@ function Home() {
     else {
         // console.log("All room here *** ",rooms);
         const filteredRoom = [];
+        var single = 0, double = 0, triple = 0;
         for(let i=0;i<rooms.length;i++){
-            var single = 1, double = 1, family = 1;
-            if(rooms[i].type === "Single Economy" && single === 1){
+            if(rooms[i].type === "single" && single < 1){
                 filteredRoom.push(rooms[i]);
-                single = 0;
-            }else if(rooms[i].type === "Double Economy" && double === 1){
+                single++;
+            }else if(rooms[i].type === "double" && double < 1){
                 filteredRoom.push(rooms[i]);
-                double = 0;
-            }else if(rooms[i].type === "Family Deluxe" && double === 1){
+                double++;
+            }else if(rooms[i].type === "triple" && triple < 1){
                 filteredRoom.push(rooms[i]);
-                family = 0;
+                triple++;
             }
         }
+
         console.log("Filtered list ",filteredRoom);
         return (
             <div className={styles.serviceBack}>

@@ -9,9 +9,10 @@ import imgSuiteRoom from '../images/rooms/Suite.jpg'
 
 function RoomThumbnail(props) {
     const { room } = props;
+    var imgUrl
 
     if (room.type == "single") {
-        var imgUrl = imgSingleRoom;
+        imgUrl = imgSingleRoom;
     } else if (room.type == "double") {
         imgUrl = imgDoubleRoom;
     } else if (room.type == "triple") {
