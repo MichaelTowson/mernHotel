@@ -6,12 +6,14 @@ const ReservationSchema = new mongoose.Schema({
 
     //ONE-TO-MANY: A reservation is connected to a user and a room.
     user_id: {
-        type: String,
-        required: [true, "Please enter a specific user ID that the reservation will be placed under."],
+        type: mongoose.Types.ObjectId,
+        ref: 'User',
+        required: [true, "Please enter a specific user ID that the reservation will be placed under."]
     },
 
     room_id: {
-        type: String,
+        type: mongoose.Types.ObjectId,
+        ref: 'Room',
         required: [true, "Please enter a specific user ID that the reservation will be placed under."]
     },
 

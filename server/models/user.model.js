@@ -7,8 +7,9 @@ const UserSchema = new mongoose.Schema({
     //Add the reservation ID to the reservation field.
 
     reservations: [{
-        type: String,
-        required: [false],
+        type: mongoose.Types.ObjectId,
+        ref: 'Reservation',
+        required: false 
     }],
 
     first_name: {

@@ -5,9 +5,11 @@ const RoomSchema = new mongoose.Schema({
 
     //Room also has the field of _id, which is automatically created upon generation.
 
-    reservations: [ {type: String } ],
-
-    dates_in_use: [ { type: Date } ],
+    reservations: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'Reservation',
+        required: false 
+    }],
 
     room_number: {
         type: Number,
