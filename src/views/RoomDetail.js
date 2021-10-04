@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import styles from '../components/index.module.css';
+import styles from './RoomDetail.module.css';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
 import { navigate } from '@reach/router';
-// import backGround from '../components/images/familyRoom.jpg';
-// import roomImg from '../components/images/roomDetail.jpg';
+
+//Import background images for various rooms
+import imgSingle from '../images/rooms/Single.jpg';
+import imgDouble from '../images/rooms/Double.jpg';
+import imgTriple from '../images/rooms/Triple.jpg';
+import imgSuite from '../images/rooms/Suite.jpg';
 
 
 function RoomDetail(props) {
@@ -20,7 +24,7 @@ function RoomDetail(props) {
             .then(res => setRoom(res.data))
             .catch(err => console.log(err));
     }, [id]);
-    console.log("all room", room);
+    console.log("all rooms: ", room);
     if (room === null) {
         return (
             <p>Loading....</p>
@@ -28,8 +32,17 @@ function RoomDetail(props) {
     }
     else {
         const title = room.type + " Room";
-        const room_img = '../images/rooms/Single.jpg';
-        console.log(room_img);
+        var room_img
+
+        if(room.type == "single") {
+            room_img = imgSingle
+        } else if (room.type == "double") {
+            room_img = imgDouble
+        } else if (room.type == "triple") {
+            room_img = imgTriple
+        } else if (room.type == "suite") {
+            room_img = imgSuite
+        }
 
         return (
             <div className={styles.serviceBack}>

@@ -22,6 +22,7 @@
     color: var(--mainWhite);
     text-align: center;
     letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
 }
 
 .heroLine{

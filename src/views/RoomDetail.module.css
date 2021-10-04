@@ -1,0 +1,80 @@
+/*  Code for view SingleRoom.js  */
+
+.singleRoom {
+    padding: 5rem;
+    /* display :flex; */
+}
+.singleRoomImages {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+}
+.singleRoomImages img {
+    width: 100%;
+    display: block;
+}
+.singleRoomInfo {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+    margin: 2rem auto;
+}
+.singleRoomInfo div {
+    width: 100%;
+    display: block;
+}
+.desc, .info {
+    margin: 1rem 0;
+}
+.desc h2 {
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    text-align: left;
+}
+.desc p {
+    line-height: 2;
+    text-align: left;
+}
+.info h2,
+.info h5 {
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    text-align: left;
+}
+.info h6 {
+    font-weight: 300;
+}
+
+.bookRoom{
+    margin-top: 20px;
+    padding: 10px;
+    background-color:  #af9a7d;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+.roomExtras {
+    width: 80vw;
+    margin: 0 auto 3rem auto;
+}
+.roomExtras h2 {
+    /* float: left; */
+    text-align: left;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
+.roomExtras ul {
+    padding: 0px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    text-align: left
+}
