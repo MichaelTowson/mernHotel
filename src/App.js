@@ -3,7 +3,7 @@ import './App.css';
 
 import Home from './views/Home';
 import Rooms from './views/Rooms';
-import SingleRoom from './views/SingleRoom';
+import RoomDetail from './views/RoomDetail';
 import Error from './views/Error';
 import Register from './components/Register';
 import ViewReservation from './views/ViewReservation';
@@ -19,7 +19,7 @@ function App() {
                 <Redirect from='/home' to='/' noThrow />
                 <Home path="/" />
                 <Rooms path="/rooms" />
-                <SingleRoom path="/home/singleRooms/:id" />
+                <RoomDetail path="/home/roomdetail/:id" />
                 <Error path="/home/error" />
                 <Register path="/register" />
                 <ViewReservation path="/reservation" />

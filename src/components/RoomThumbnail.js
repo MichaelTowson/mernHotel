@@ -26,7 +26,7 @@ function RoomThumbnail(props) {
             <div className={styles.priceTop}>${ room.price }</div>
             <div className={styles.roomName}>{ room.type }</div>
             <div className={styles.roomLink}>
-                <Link className={styles.linkText} to={`/home/singleRooms/${room._id}`} >Details</Link>
+                <Link className={styles.linkText} to={`/home/roomdetail/${room._id}`} >Details</Link>
             </div>
         </div>
     )
