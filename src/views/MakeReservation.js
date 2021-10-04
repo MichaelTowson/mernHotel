@@ -66,7 +66,6 @@ function MakeReservation() {
             </div>);
     }
 
-    console.log("hereee", user_id)
     const availableRooms = roomsList.filter(isRoomAvailable)
 
         return (

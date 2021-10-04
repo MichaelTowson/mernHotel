@@ -14,21 +14,21 @@ module.exports.create = async (request, response) => {
             user_id: request.body.user_id,
             room_id: request.body.room_id,
             date: request.body.date,
-            adult_rsvps: request.body.adult_rsvps,
-            child_rsvps: request.body.child_rsvps,
+            rsvps: request.body.rsvps,
+            active: true,
         }
+        
         //Await queues this into a new thread.
         const reservation = await Reservation.create(newReservation)
 
         //Waits for the reservation to be done, because we need that data.
         await User.updateOne({_id : request.body.user_id}, {$push: {reservations: reservation._id}});
-
-        await Room.updateOne({_id : request.body.room_id}, {$push: {reservations: reservation._id, dates_in_use: reservation.date}});
+        await Room.updateOne({_id : request.body.room_id}, {$push: {reservations: reservation._id}});
 
         return response.json(reservation)
     }
     catch(err){
-        res.status(400).json(err);
+        reservation.status(400).json(err);
     }
 }
 

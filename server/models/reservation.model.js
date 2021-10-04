@@ -35,7 +35,12 @@ const ReservationSchema = new mongoose.Schema({
 
     billing_address: {
         type: String,
-        required: [true, "Please enter a valid billing address."]
+        required: [false, "Please enter a valid billing address."]
+    },
+
+    active: {
+        type: Boolean,
+        required: [true, "Database submission error. Database failed to mark reservation as 'active.'"]
     }
 
 

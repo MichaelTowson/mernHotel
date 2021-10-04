@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../components/index.module.css';
 import { navigate } from '@reach/router';
 
-function Reserve(props) {
+function ReservationListing(props) {
     const { reserveId, room, date, adult, children } = props;
 
     function handleCancel(id){
@@ -29,4 +29,4 @@ function Reserve(props) {
     )
 }
 
-export default Reserve;
+export default ReservationListing;
