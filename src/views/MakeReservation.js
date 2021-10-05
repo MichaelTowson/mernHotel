@@ -5,8 +5,14 @@ import 'react-calendar/dist/Calendar.css';
 import './ReservationStyle.css';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
-import backGround from '../images/reservation-page.jpg';
+import background from '../images/reservation-page.jpg';
 import {navigate} from '@reach/router';
+
+//Import background images for various rooms
+import imgSingle from '../images/rooms/Single.jpg';
+import imgDouble from '../images/rooms/Double.jpg';
+import imgTriple from '../images/rooms/Triple.jpg';
+import imgSuite from '../images/rooms/Suite.jpg';
 
 function MakeReservation() {
     const [room_id, setRoom_Id] = useState('');
@@ -27,7 +33,7 @@ function MakeReservation() {
         setDate(date);
     }
 
-
+    //Call-back function for creating reservation
     function handleSubmit(event) {
         if(user_id){ 
             event.preventDefault();
@@ -71,7 +77,7 @@ function MakeReservation() {
         return (
             <>
                 <NavBar/>
-                <Hero back={backGround}
+                <Hero back={background}
                     title="Make a Reservation"
                     desc="Choose your date and enjoy."
                     btnText="RETURN HOME"
