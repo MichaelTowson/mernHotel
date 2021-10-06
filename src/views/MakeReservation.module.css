@@ -25,25 +25,40 @@
 }
 
 .roomCard{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     text-align: left;
-    display: block;
     margin-bottom: 10px;
     border: solid #af9a7d 1px;
     padding: 10px;
 }
 
+.roomCard__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.roomCard__img {
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+
 .roomCard h1{
+    text-transform: capitalize;
     font-size: 18px;
 }
 
 .roomInfo{
-    margin-left: 20px;
     vertical-align: top;
     display: inline-block;
     text-transform: capitalize;
 }
 
 .roomInfo table{
+    width: 100%;
     border: solid lightgray 1px;
     font-size: 10px;
 }
@@ -55,13 +70,14 @@
 }
 
 .selectButton{
-    margin-top: 20px;
-    padding: 10px;
+
     background-color:  #af9a7d;;
     color: white;
     cursor: pointer;
     border: none;
     border-radius: 3px;
+    height: 2rem;
+    margin-bottom: .5rem;
 }
 .title{
     color: var(--mainBlack);

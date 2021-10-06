@@ -2,17 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import './ReservationStyle.css';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
 import background from '../images/reservation-page.jpg';
+import styles from "./MakeReservation.module.css";
 import {navigate} from '@reach/router';
-
-//Import background images for various rooms
-import imgSingle from '../images/rooms/Single.jpg';
-import imgDouble from '../images/rooms/Double.jpg';
-import imgTriple from '../images/rooms/Triple.jpg';
-import imgSuite from '../images/rooms/Suite.jpg';
+import RoomImage from '../components/RoomImage'
 
 function MakeReservation() {
     const [room_id, setRoom_Id] = useState('');
@@ -85,22 +80,33 @@ function MakeReservation() {
                 />
     
                 {/* Display a calendar and all available rooms by date. */}
-                <div className="availableRooms">
-                    <h2 className="title">Select a date to see available rooms:</h2>
+                <div className={styles.availableRooms}>
+                    <h2 className={styles.title}>Select a date to see available rooms:</h2>
                     <br></br>
-                    <div className="calendarDisplay">
-                        <Calendar className="calendarfont"
+                    <div className={styles.calendarDisplay}>
+                        <Calendar className={styles.calendarfont}
                             onChange={calendarChange}
                             value={date}
                         />
                     </div>
     
-                    <div className="roomDisplay">
+                    <div className={styles.roomDisplay}>
                         {availableRooms.map((room, index) =>
-                            <div className="roomCard" key={index}>
-                                <img src={room.featured_image} width='100px' alt="Make a hotel reservation."/>
-                                <div className="roomInfo">
+                            <div className={styles.roomCard} key={index}>
+                                <div className={styles.roomCard__title}>
                                     <h1>{room.type}</h1>
+                                    <button
+                                            className={styles.selectButton}
+                                            id={room._id}
+                                            onClick={event => setRoom_Id(event.target.id)}
+                                    >
+                                        Select Room
+                                    </button>
+                                </div>
+                                <div className={styles.roomInfo}>
+                                    <div className={styles.roomCard__img}>
+                                        <RoomImage roomType = {room.type}/>
+                                    </div>
                                     <table>
                                         <tr>
                                             <th>Max Capacity</th>
@@ -137,13 +143,6 @@ function MakeReservation() {
                                             <td>{room.parking_included ? "Yes" : "No"}</td>
                                         </tr>
                                     </table>
-                                    <button
-                                        className="selectButton"
-                                        id={room._id}
-                                        onClick={event => setRoom_Id(event.target.id)}
-                                    >
-                                        Select Room
-                                    </button>
                                 </div>
                             </div>
                         )}
@@ -160,18 +159,18 @@ function MakeReservation() {
                             onChange={event => setRoom_Id(event.target.value)}
                         />
                         <br></br>
-                        <div className="inputsReservation">
+                        <div className={styles.inputsReservation}>
                             <div>
-                                <label className="labelName">RSVPs</label>
+                                <label className={styles.labelName}>RSVPs</label>
                                 <input
                                     type="Number"
-                                    className="onlythisinput"
+                                    className={styles.onlythisinput}
                                     value={rsvps}
                                     onChange={event => setRsvps(event.target.value)}
                                 />
                             </div>
                         </div>
-                        <button type="submit" onclick className="selectButton">Make Reservation</button>
+                        <button type="submit" onclick className={styles.selectButton}>Make Reservation</button>
                     </form>
                 </div>
                 <div>
