@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import NavBar from './NavBar';
-import Hero from './Hero';
+import NavBar from '../components/NavBar';
+import Hero from '../components/Hero';
 import backGround from '../images/lobby.jpg';
-import styles from './index.module.css';
+import styles from '../components/index.module.css';
 import axios from 'axios';
-import Login from '../components/Login';
+import LoginComponent from '../components/LoginComponent';
 import {navigate} from '@reach/router';
 
-function Register() {
+function Login() {
     const [errors, setErrors] = useState([]);
     const [first_name, setFirstName] = useState("");
     const [last_name, setLastName]= useState("");
@@ -61,10 +61,10 @@ function Register() {
                         <input className={styles.logButton} type="submit" value="Create Account" />
                     </form>
                 </div>
-                <Login/>
+                <LoginComponent/>
             </div>
         </div>
     )
 }
 
-export default Register
+export default Login

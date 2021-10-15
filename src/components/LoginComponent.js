@@ -4,7 +4,7 @@ import axios from 'axios';
 import {navigate} from '@reach/router';
 
 
-function Login() {
+function LoginComponent() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
@@ -46,4 +46,4 @@ function Login() {
     )
 }
 
-export default Login
+export default LoginComponent

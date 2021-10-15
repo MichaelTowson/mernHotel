@@ -5,7 +5,7 @@ import Home from './views/Home';
 import Rooms from './views/Rooms';
 import RoomDetail from './views/RoomDetail';
 import Error from './views/Error';
-import Register from './components/Register';
+import Login from './views/Login';
 import ViewReservation from './views/ViewReservation';
 import MakeReservation from './views/MakeReservation'
 import DBUser from "./views/databaseManagement/DBUser";
@@ -21,7 +21,7 @@ function App() {
                 <Rooms path="/rooms" />
                 <RoomDetail path="/home/roomdetail/:id" />
                 <Error path="/home/error" />
-                <Register path="/register" />
+                <Login path="/login" />
                 <ViewReservation path="/reservation" />
                 <MakeReservation path = "/makereservation" />
                 <DBUser path = "/dbuser" />

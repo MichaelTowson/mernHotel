@@ -75,7 +75,7 @@ function NavBar() {
                             <div class={styles.loginList} id="loginList" style={{ display: 'none' }}>
                                 <ul className={styles.ulList}>
 
-                                    <li> <Link to="/register">Login</Link></li>
+                                    <li> <Link to="/login">Login</Link></li>
                                     <li onClick={logoutUser}><a> Logout</a></li>
                                     <li> <Link to="/reservation">My reservations</Link></li>
                                 </ul>
