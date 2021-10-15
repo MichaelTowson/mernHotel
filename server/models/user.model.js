@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator')
-
+const bcrypt = require("bcrypt");
 const UserSchema = new mongoose.Schema({
 
     //User also has the field of _id, which is automatically created upon generation.
@@ -62,8 +62,6 @@ UserSchema.pre('validate', function (next) {
     }
     next();
 });
-
-const bcrypt = require('bcrypt');
 
 UserSchema.pre('save', function (next) {
     bcrypt.hash(this.password, 10)

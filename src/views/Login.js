@@ -53,11 +53,11 @@ function Login() {
                         {
                             errors.hasOwnProperty("email") ? <p style={{ color: 'red' }}> * {errors["email"].message} </p> : ""
                         }
-                        <input type="text" placeholder="Password" onChange={(e) =>setPassword(e.target.value)} />
+                        <input type="password" placeholder="Password" onChange={(e) =>setPassword(e.target.value)} />
                         {
                             errors.hasOwnProperty("password") ? <p style={{ color: 'red' }}> * {errors["password"].message} </p> : ""
                         }
-                        <input type="text" placeholder="Confirm Password" onChange={(e) =>setConfirmPassword(e.target.value)}/>
+                        <input type="password" placeholder="Confirm Password" onChange={(e) =>setConfirmPassword(e.target.value)}/>
                         <input className={styles.logButton} type="submit" value="Create Account" />
                     </form>
                 </div>
