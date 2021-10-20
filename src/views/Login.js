@@ -6,6 +6,8 @@ import styles from '../components/index.module.css';
 import axios from 'axios';
 import LoginComponent from '../components/LoginComponent';
 import {navigate} from '@reach/router';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
     const [errors, setErrors] = useState([]);
