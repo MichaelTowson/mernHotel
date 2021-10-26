@@ -1,6 +1,6 @@
-import { Router, Redirect } from '@reach/router';
-import './App.css';
+import { Router, Redirect } from '@reach/router'; //Used to navigate to different pages
 
+//Import views to be used by Reach Router
 import Home from './views/Home';
 import Rooms from './views/Rooms';
 import RoomDetail from './views/RoomDetail';
