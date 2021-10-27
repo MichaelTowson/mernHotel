@@ -1,8 +1,6 @@
 ----ABOUT----
 
-This website was originally completed in partial fulfillment of requirements for Full-Stack Certification at Coding Dojo under the title "Resort-App."
-
-This code base has been refactored, expanded, and enhanced by Michael Towson, one of the original authors.
+Mock-up hotel reservation website. This website was originally completed in partial fulfillment of requirements for Full-Stack Certification at Coding Dojo under the title "Resort-App." This code base has been refactored, expanded, and enhanced by Michael Towson, one of the original authors.
 
 ----.ENV REQUIREMENTS----
 
@@ -21,9 +19,9 @@ Server will not run without .env file, which is not included in public repositor
 **Client**
 
 |REACT| Javasript framework used for front-end display and creating single page application
-|AXIOS| Used for making HTTP requests
+|AXIOS| Used for making http requests
 |REACT-TOASTIFY| Used to create "toast" notifications on the login page.
-|REACT-CALENDAR| - Used to create calendar for reservation scheduling.
+|REACT-CALENDAR| Used to create calendar for reservation scheduling.
 
 **Server**
 
